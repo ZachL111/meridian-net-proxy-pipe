@@ -1,0 +1,73 @@
+{
+  "repo": "meridian-net-proxy-pipe",
+  "language": "TypeScript",
+  "category": "Networking",
+  "goal": "Design a TypeScript verification harness for proxy systems, covering stream reduction, windowed input fixtures, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "packet span",
+      "retry pressure",
+      "route drift",
+      "socket risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "packet span",
+      "signal": 47,
+      "slack": 52,
+      "drag": 9,
+      "confidence": 80,
+      "score": 199,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "retry pressure",
+      "signal": 79,
+      "slack": 32,
+      "drag": 29,
+      "confidence": 66,
+      "score": 169,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "route drift",
+      "signal": 60,
+      "slack": 25,
+      "drag": 13,
+      "confidence": 75,
+      "score": 181,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "socket risk",
+      "signal": 55,
+      "slack": 46,
+      "drag": 24,
+      "confidence": 77,
+      "score": 161,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "packet span",
+      "signal": 73,
+      "slack": 54,
+      "drag": 20,
+      "confidence": 78,
+      "score": 218,
+      "lane": "ship"
+    }
+  ]
+}

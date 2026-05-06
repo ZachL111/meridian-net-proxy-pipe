@@ -1,0 +1,7 @@
+name,demand,capacity,latency,risk,weight,score,decision,reason
+baseline,65,90,15,15,6,124,review,networking baseline scenario exercises the review path for bounded failure handling
+pressure,84,75,25,20,8,105,review,networking pressure scenario exercises the review path for bounded failure handling
+surge,98,95,22,12,14,231,accept,networking surge scenario keeps the local fixture within the modeled acceptance band
+degraded,71,62,35,26,8,10,review,networking degraded scenario exercises the review path for bounded failure handling
+recovery,83,102,22,9,9,206,accept,networking recovery scenario keeps the local fixture within the modeled acceptance band
+boundary,71,85,22,18,8,107,review,networking boundary scenario exercises the review path for bounded failure handling
